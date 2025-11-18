@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #632EE3; /* fallback solid color */
+}
+
+@layer utilities {
+  .text-primary {
+    @apply bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent;
+  }
+}
+
+
+@layer utilities {
+  .bg-primary-gradient {
+    background: linear-gradient(to right, #632EE3, #9F62F2);
+    color: white;
+  }
+}
+
+  .text-primary-gradient {
+    color: linear-gradient(to right, #632EE3, #9F62F2);
+   
+  }
